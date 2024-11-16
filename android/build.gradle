@@ -32,6 +32,9 @@ rootProject.allprojects {
 apply plugin: 'com.android.library'
 
 android {
+    if (project.android.hasProperty("namespace")) {
+        namespace = "me.yohom.amap_map_fluttify"
+    }
     compileSdkVersion 28
 
     sourceSets {
